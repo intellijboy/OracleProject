@@ -1,4 +1,4 @@
-package org.maven.dao;
+package cn.sunline.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

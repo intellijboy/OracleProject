@@ -1,6 +1,7 @@
 package cn.sunline.entity;
 
 /**
+ * 课程类
  * @author 刘卜铷
  *2016年11月5日 下午10:47:02
  *

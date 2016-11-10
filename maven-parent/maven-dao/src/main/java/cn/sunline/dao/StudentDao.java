@@ -10,5 +10,6 @@ import cn.sunline.entity.Student;
  *
  */
 public interface StudentDao {
+	
 	public List<Student> selectAllStudent();
 }

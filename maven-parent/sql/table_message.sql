@@ -16,17 +16,3 @@ tablespace SSPDATA
     minextents 1
     maxextents unlimited
   );
--- Create/Recreate primary, unique and foreign key constraints 
-alter table MESSAGE
-  add primary key (ID_POSITIVE, ID_NEGETIVE)
-  using index 
-  tablespace SSPDATA
-  pctfree 10
-  initrans 2
-  maxtrans 255
-  storage
-  (
-    initial 64K
-    minextents 1
-    maxextents unlimited
-  );

@@ -3,7 +3,8 @@ create table SCORE
 (
   student_id NUMBER(10) not null,
   course_id  NUMBER(10) not null,
-  score      NUMBER(4,1)
+  score      NUMBER(4,1),
+  teacher_id NUMBER(10)
 )
 tablespace SSPDATA
   pctfree 10

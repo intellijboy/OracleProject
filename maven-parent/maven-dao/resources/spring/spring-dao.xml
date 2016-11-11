@@ -24,6 +24,7 @@
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
         <!--entity包别名-->
         <property name="typeAliasesPackage" value="cn.sunline.entity"></property>
+        
         <!--mapper需要的xml映射文件-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
     </bean>

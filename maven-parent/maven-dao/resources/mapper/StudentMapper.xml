@@ -24,14 +24,6 @@
     delete from STUDENT
     where ID = #{id,jdbcType=DECIMAL}
   </delete>
-  <insert id="insert" parameterType="cn.sunline.entity.Student">
-    insert into STUDENT (ID, NAME, PASSWORD, 
-      GENDER, BIRTHDAY, MOTTO, 
-      HEAD_URL, PHONE)
-    values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{gender,jdbcType=VARCHAR}, #{birthday,jdbcType=TIMESTAMP}, #{motto,jdbcType=VARCHAR}, 
-      #{headUrl,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR})
-  </insert>
   <insert id="insertSelective" parameterType="cn.sunline.entity.Student">
     insert into STUDENT
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -114,15 +106,21 @@
     </set>
     where ID = #{id,jdbcType=DECIMAL}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.sunline.entity.Student">
-    update STUDENT
-    set NAME = #{name,jdbcType=VARCHAR},
-      PASSWORD = #{password,jdbcType=VARCHAR},
-      GENDER = #{gender,jdbcType=VARCHAR},
-      BIRTHDAY = #{birthday,jdbcType=TIMESTAMP},
-      MOTTO = #{motto,jdbcType=VARCHAR},
-      HEAD_URL = #{headUrl,jdbcType=VARCHAR},
-      PHONE = #{phone,jdbcType=VARCHAR}
-    where ID = #{id,jdbcType=DECIMAL}
-  </update>
+  
+  <select id="selectStuByIDAndPwd" resultType="Student">
+  	SELECT * from student
+  	 WHERE id=#{id}
+  	 AND password=#{password}
+  </select>
+  
+  <select id="selectStuTeachers" resultType="Teacher">
+  		SELECT id,name,password,head_url,phone,course_id
+  		FROM teacher 
+  		WHERE id IN(
+  		SELECT teacher_id 
+  		FROM score 
+  		WHERE student_id=#{stuId}
+  		)
+  		
+  </select>
 </mapper>

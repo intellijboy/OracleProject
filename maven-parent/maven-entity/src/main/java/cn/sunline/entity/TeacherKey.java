@@ -1,4 +1,4 @@
-package cn.sunline.entity.key;
+package cn.sunline.entity;
 /**
  * @author 刘卜铷
  *2016年11月11日 下午5:51:39

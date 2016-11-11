@@ -22,12 +22,6 @@
     where STUDENT_ID = #{studentId,jdbcType=DECIMAL}
       and COURSE_ID = #{courseId,jdbcType=DECIMAL}
   </delete>
-  <insert id="insert" parameterType="cn.sunline.entity.Score">
-    insert into SCORE (STUDENT_ID, COURSE_ID, SCORE, 
-      TEACHER_ID)
-    values (#{studentId,jdbcType=DECIMAL}, #{courseId,jdbcType=DECIMAL}, #{score,jdbcType=DECIMAL}, 
-      #{teacherId,jdbcType=DECIMAL})
-  </insert>
   <insert id="insertSelective" parameterType="cn.sunline.entity.Score">
     insert into SCORE
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -72,11 +66,10 @@
     where STUDENT_ID = #{studentId,jdbcType=DECIMAL}
       and COURSE_ID = #{courseId,jdbcType=DECIMAL}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.sunline.entity.Score">
-    update SCORE
-    set SCORE = #{score,jdbcType=DECIMAL},
-      TEACHER_ID = #{teacherId,jdbcType=DECIMAL}
-    where STUDENT_ID = #{studentId,jdbcType=DECIMAL}
-      and COURSE_ID = #{courseId,jdbcType=DECIMAL}
-  </update>
+  
+  <select id="selectStuCourses" resultType="Score">
+  	SELECT student_id,course_id,score,teacher_id 
+  	FROM score 
+  	WHERE student_id = #{stuId}
+  </select>
 </mapper>

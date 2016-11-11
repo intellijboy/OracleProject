@@ -1,12 +1,15 @@
 package cn.sunline.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import cn.sunline.entity.Score;
-import cn.sunline.entity.key.ScoreKey;
+import cn.sunline.entity.ScoreKey;
+import cn.sunline.entity.Student;
 
 public interface ScoreMapper {
     int deleteByPrimaryKey(ScoreKey key);
-
-    int insert(Score record);
 
     int insertSelective(Score record);
 
@@ -14,5 +17,13 @@ public interface ScoreMapper {
 
     int updateByPrimaryKeySelective(Score record);
 
-    int updateByPrimaryKey(Score record);
+    	
+    /**
+     * 查看学生课程信息
+     * @param stuId
+     * @return
+     */
+    List<Score> selectStuCourses(@Param("stuId")long stuId);
+    
+    
 }

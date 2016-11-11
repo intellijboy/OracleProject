@@ -7,12 +7,6 @@
     <result column="CONTENT" jdbcType="VARCHAR" property="content" />
     <result column="DATETIME" jdbcType="TIMESTAMP" property="datetime" />
   </resultMap>
-  <insert id="insert" parameterType="cn.sunline.entity.Message">
-    insert into MESSAGE (ID_POSITIVE, ID_NEGETIVE, CONTENT, 
-      DATETIME)
-    values (#{idPositive,jdbcType=DECIMAL}, #{idNegetive,jdbcType=DECIMAL}, #{content,jdbcType=VARCHAR}, 
-      #{datetime,jdbcType=TIMESTAMP})
-  </insert>
   <insert id="insertSelective" parameterType="cn.sunline.entity.Message">
     insert into MESSAGE
     <trim prefix="(" suffix=")" suffixOverrides=",">

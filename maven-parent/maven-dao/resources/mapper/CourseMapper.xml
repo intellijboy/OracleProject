@@ -19,12 +19,6 @@
     delete from COURSE
     where ID = #{id,jdbcType=DECIMAL}
   </delete>
-  <insert id="insert" parameterType="cn.sunline.entity.Course">
-    insert into COURSE (ID, NAME, CREDIT
-      )
-    values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{credit,jdbcType=DECIMAL}
-      )
-  </insert>
   <insert id="insertSelective" parameterType="cn.sunline.entity.Course">
     insert into COURSE
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -62,10 +56,5 @@
     </set>
     where ID = #{id,jdbcType=DECIMAL}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.sunline.entity.Course">
-    update COURSE
-    set NAME = #{name,jdbcType=VARCHAR},
-      CREDIT = #{credit,jdbcType=DECIMAL}
-    where ID = #{id,jdbcType=DECIMAL}
-  </update>
+  
 </mapper>

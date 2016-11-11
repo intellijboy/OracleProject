@@ -24,14 +24,6 @@
     where ID = #{id,jdbcType=DECIMAL}
       and COURSE_ID = #{courseId,jdbcType=DECIMAL}
   </delete>
-  <insert id="insert" parameterType="cn.sunline.entity.Teacher">
-    insert into TEACHER (ID, COURSE_ID, NAME, 
-      PASSWORD, HEAD_URL, PHONE
-      )
-    values (#{id,jdbcType=DECIMAL}, #{courseId,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, 
-      #{password,jdbcType=VARCHAR}, #{headUrl,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}
-      )
-  </insert>
   <insert id="insertSelective" parameterType="cn.sunline.entity.Teacher">
     insert into TEACHER
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -91,15 +83,6 @@
         PHONE = #{phone,jdbcType=VARCHAR},
       </if>
     </set>
-    where ID = #{id,jdbcType=DECIMAL}
-      and COURSE_ID = #{courseId,jdbcType=DECIMAL}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="cn.sunline.entity.Teacher">
-    update TEACHER
-    set NAME = #{name,jdbcType=VARCHAR},
-      PASSWORD = #{password,jdbcType=VARCHAR},
-      HEAD_URL = #{headUrl,jdbcType=VARCHAR},
-      PHONE = #{phone,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=DECIMAL}
       and COURSE_ID = #{courseId,jdbcType=DECIMAL}
   </update>

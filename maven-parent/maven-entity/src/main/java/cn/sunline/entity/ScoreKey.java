@@ -1,4 +1,4 @@
-package cn.sunline.entity.key;
+package cn.sunline.entity;
 /**
  * 
  * @author 刘卜铷

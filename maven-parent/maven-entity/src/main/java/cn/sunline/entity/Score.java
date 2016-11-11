@@ -1,8 +1,6 @@
 package cn.sunline.entity;
 
 import java.math.BigDecimal;
-
-import cn.sunline.entity.key.ScoreKey;
 /**
  * 
  * @author 刘卜铷

@@ -1,36 +1,39 @@
 package cn.sunline.entity;
 
+import java.math.BigDecimal;
 /**
- * 课程类
+ * 
  * @author 刘卜铷
- *2016年11月5日 下午10:47:02
- *
+ *2016年11月11日 下午5:51:09
  */
 public class Course {
-	//课程编号
-	private int id;
-	//课程名字
-	private String name;
-	//学分
-	private int credit;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getCredit() {
-		return credit;
-	}
-	public void setCredit(int credit) {
-		this.credit = credit;
-	}
-	
+    private Long id;
 
+    private String name;
+
+    private BigDecimal credit;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
+
+    public BigDecimal getCredit() {
+        return credit;
+    }
+
+    public void setCredit(BigDecimal credit) {
+        this.credit = credit;
+    }
 }

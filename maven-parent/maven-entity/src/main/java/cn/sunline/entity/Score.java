@@ -1,36 +1,31 @@
 package cn.sunline.entity;
 
-/**
- * 成绩类
- * @author 刘卜铷
- *2016年11月5日 下午10:48:10
- *
- */
-public class Score {
-	//学生编号
-	private int studentId;
-	//课程编号
-	private int courseId;
-	//成绩
-	private double score;
-	public int getStudentId() {
-		return studentId;
-	}
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
-	}
-	public int getCourseId() {
-		return courseId;
-	}
-	public void setCourseId(int courseId) {
-		this.courseId = courseId;
-	}
-	public double getScore() {
-		return score;
-	}
-	public void setScore(double score) {
-		this.score = score;
-	}
-	
+import java.math.BigDecimal;
 
+import cn.sunline.entity.key.ScoreKey;
+/**
+ * 
+ * @author 刘卜铷
+ *2016年11月11日 下午5:51:19
+ */
+public class Score extends ScoreKey {
+    private BigDecimal score;
+
+    private Long teacherId;
+
+    public BigDecimal getScore() {
+        return score;
+    }
+
+    public void setScore(BigDecimal score) {
+        this.score = score;
+    }
+
+    public Long getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(Long teacherId) {
+        this.teacherId = teacherId;
+    }
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sunline.dao.TeacherMapper">
+  <resultMap id="BaseResultMap" type="cn.sunline.entity.Teacher">
+    <id column="ID" jdbcType="DECIMAL" property="id" />
+    <id column="COURSE_ID" jdbcType="DECIMAL" property="courseId" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="HEAD_URL" jdbcType="VARCHAR" property="headUrl" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ID, COURSE_ID, NAME, PASSWORD, HEAD_URL, PHONE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="cn.sunline.entity.TeacherKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER
+    where ID = #{id,jdbcType=DECIMAL}
+      and COURSE_ID = #{courseId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="cn.sunline.entity.TeacherKey">
+    delete from TEACHER
+    where ID = #{id,jdbcType=DECIMAL}
+      and COURSE_ID = #{courseId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="cn.sunline.entity.Teacher">
+    insert into TEACHER (ID, COURSE_ID, NAME, 
+      PASSWORD, HEAD_URL, PHONE
+      )
+    values (#{id,jdbcType=DECIMAL}, #{courseId,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{headUrl,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.sunline.entity.Teacher">
+    insert into TEACHER
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="courseId != null">
+        COURSE_ID,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="password != null">
+        PASSWORD,
+      </if>
+      <if test="headUrl != null">
+        HEAD_URL,
+      </if>
+      <if test="phone != null">
+        PHONE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="courseId != null">
+        #{courseId,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="headUrl != null">
+        #{headUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.sunline.entity.Teacher">
+    update TEACHER
+    <set>
+      <if test="name != null">
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        PASSWORD = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="headUrl != null">
+        HEAD_URL = #{headUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+      and COURSE_ID = #{courseId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.sunline.entity.Teacher">
+    update TEACHER
+    set NAME = #{name,jdbcType=VARCHAR},
+      PASSWORD = #{password,jdbcType=VARCHAR},
+      HEAD_URL = #{headUrl,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=DECIMAL}
+      and COURSE_ID = #{courseId,jdbcType=DECIMAL}
+  </update>
+</mapper>

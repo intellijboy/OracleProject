@@ -1,41 +1,50 @@
 package cn.sunline.entity;
+
+import cn.sunline.entity.key.TeacherKey;
+
 /**
- * 教师类
+ * 
  * @author 刘卜铷
- *2016年11月10日 下午1:27:08
+ *2016年11月11日 下午5:51:34
  */
-public class Teacher {
-		//教师编号
-		private int id;
-		//教师姓名
-		private String name;
-		//教师密码
-		private String password;
-		//教师头像
-		private String headUrl;
-		public int getId() {
-			return id;
-		}
-		public void setId(int id) {
-			this.id = id;
-		}
-		public String getName() {
-			return name;
-		}
-		public void setName(String name) {
-			this.name = name;
-		}
-		public String getPassword() {
-			return password;
-		}
-		public void setPassword(String password) {
-			this.password = password;
-		}
-		public String getHeadUrl() {
-			return headUrl;
-		}
-		public void setHeadUrl(String headUrl) {
-			this.headUrl = headUrl;
-		}
-		
+public class Teacher extends TeacherKey {
+    private String name;
+
+    private String password;
+
+    private String headUrl;
+
+    private String phone;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
+
+    public String getHeadUrl() {
+        return headUrl;
+    }
+
+    public void setHeadUrl(String headUrl) {
+        this.headUrl = headUrl == null ? null : headUrl.trim();
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
+    }
 }

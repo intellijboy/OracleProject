@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sunline.dao.MessageMapper">
+  <resultMap id="BaseResultMap" type="cn.sunline.entity.Message">
+    <result column="ID_POSITIVE" jdbcType="DECIMAL" property="idPositive" />
+    <result column="ID_NEGETIVE" jdbcType="DECIMAL" property="idNegetive" />
+    <result column="CONTENT" jdbcType="VARCHAR" property="content" />
+    <result column="DATETIME" jdbcType="TIMESTAMP" property="datetime" />
+  </resultMap>
+  <insert id="insert" parameterType="cn.sunline.entity.Message">
+    insert into MESSAGE (ID_POSITIVE, ID_NEGETIVE, CONTENT, 
+      DATETIME)
+    values (#{idPositive,jdbcType=DECIMAL}, #{idNegetive,jdbcType=DECIMAL}, #{content,jdbcType=VARCHAR}, 
+      #{datetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.sunline.entity.Message">
+    insert into MESSAGE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="idPositive != null">
+        ID_POSITIVE,
+      </if>
+      <if test="idNegetive != null">
+        ID_NEGETIVE,
+      </if>
+      <if test="content != null">
+        CONTENT,
+      </if>
+      <if test="datetime != null">
+        DATETIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="idPositive != null">
+        #{idPositive,jdbcType=DECIMAL},
+      </if>
+      <if test="idNegetive != null">
+        #{idNegetive,jdbcType=DECIMAL},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="datetime != null">
+        #{datetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

@@ -14,7 +14,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.fastjson.JSON;
 
-import cn.sunline.dao.StudentDao;
 import cn.sunline.entity.Student;
 
 /**
@@ -31,7 +30,7 @@ public class TestDruid {
 		private  DataSource dataSource;
 		
 		@Autowired
-		private StudentDao sutdentDao;
+		private StudentMapper studentMapper;
 	
 		@Test
 		public void testGetDataSource() throws SQLException{
@@ -40,7 +39,8 @@ public class TestDruid {
 		
 		@Test
 		public void testSelectAllStudent(){
-			List<Student> selectAllStudent = sutdentDao.selectAllStudent();
-			System.out.println(JSON.toJSONString(selectAllStudent));
+		//	Student stu = studentMapper.selectStuById(20160002);
+			Student stu =studentMapper.selectByPrimaryKey(20160002l);
+			System.out.println(JSON.toJSONString(stu));
 		}
 }

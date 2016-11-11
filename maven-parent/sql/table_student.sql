@@ -7,7 +7,8 @@ create table STUDENT
   gender     VARCHAR2(4),
   birthday   DATE,
   motto      VARCHAR2(200),
-  head_url   VARCHAR2(200)
+  head_url   VARCHAR2(200),
+  phone      VARCHAR2(11)
 )
 tablespace SSPDATA
   pctfree 10

@@ -1,5 +1,5 @@
-﻿prompt PL/SQL Developer import file
-prompt Created on 2016年11月10日 by dl
+prompt PL/SQL Developer import file
+prompt Created on 2016年11月11日 by dl
 set feedback off
 set define off
 prompt Disabling triggers for SCORE...
@@ -12,118 +12,6 @@ delete from SCORE;
 commit;
 prompt Loading SCORE...
 insert into SCORE (student_id, course_id, score)
-values (20160000, 1017, 86);
-insert into SCORE (student_id, course_id, score)
-values (20160000, 1020, 97);
-insert into SCORE (student_id, course_id, score)
-values (20160000, 1021, 82);
-insert into SCORE (student_id, course_id, score)
-values (20160000, 1007, 84);
-insert into SCORE (student_id, course_id, score)
-values (20160000, 1024, 82);
-insert into SCORE (student_id, course_id, score)
-values (20160000, 1011, 97);
-insert into SCORE (student_id, course_id, score)
-values (20160000, 1015, 66);
-insert into SCORE (student_id, course_id, score)
-values (20160001, 1018, 65);
-insert into SCORE (student_id, course_id, score)
-values (20160001, 1003, 71);
-insert into SCORE (student_id, course_id, score)
-values (20160001, 1020, 73);
-insert into SCORE (student_id, course_id, score)
-values (20160001, 1007, 67);
-insert into SCORE (student_id, course_id, score)
-values (20160001, 1006, 67);
-insert into SCORE (student_id, course_id, score)
-values (20160001, 1009, 90);
-insert into SCORE (student_id, course_id, score)
-values (20160001, 1013, 69);
-insert into SCORE (student_id, course_id, score)
-values (20160002, 1018, 100);
-insert into SCORE (student_id, course_id, score)
-values (20160002, 1002, 67);
-insert into SCORE (student_id, course_id, score)
-values (20160002, 1004, 80);
-insert into SCORE (student_id, course_id, score)
-values (20160002, 1021, 96);
-insert into SCORE (student_id, course_id, score)
-values (20160002, 1022, 61);
-insert into SCORE (student_id, course_id, score)
-values (20160002, 1012, 91);
-insert into SCORE (student_id, course_id, score)
-values (20160002, 1013, 86);
-insert into SCORE (student_id, course_id, score)
-values (20160003, 1016, 74);
-insert into SCORE (student_id, course_id, score)
-values (20160003, 1001, 87);
-insert into SCORE (student_id, course_id, score)
-values (20160003, 1019, 92);
-insert into SCORE (student_id, course_id, score)
-values (20160003, 1020, 99);
-insert into SCORE (student_id, course_id, score)
-values (20160003, 1024, 52);
-insert into SCORE (student_id, course_id, score)
-values (20160003, 1011, 98);
-insert into SCORE (student_id, course_id, score)
-values (20160003, 1014, 92);
-insert into SCORE (student_id, course_id, score)
-values (20160004, 1020, 82);
-insert into SCORE (student_id, course_id, score)
-values (20160004, 1005, 95);
-insert into SCORE (student_id, course_id, score)
-values (20160004, 1007, 99);
-insert into SCORE (student_id, course_id, score)
-values (20160004, 1006, 81);
-insert into SCORE (student_id, course_id, score)
-values (20160004, 1023, 100);
-insert into SCORE (student_id, course_id, score)
-values (20160004, 1008, 94);
-insert into SCORE (student_id, course_id, score)
-values (20160004, 1011, 67);
-insert into SCORE (student_id, course_id, score)
-values (20160005, 1016, 78);
-insert into SCORE (student_id, course_id, score)
-values (20160005, 1001, 80);
-insert into SCORE (student_id, course_id, score)
-values (20160005, 1003, 61);
-insert into SCORE (student_id, course_id, score)
-values (20160005, 1020, 86);
-insert into SCORE (student_id, course_id, score)
-values (20160005, 1023, 54);
-insert into SCORE (student_id, course_id, score)
-values (20160005, 1008, 74);
-insert into SCORE (student_id, course_id, score)
-values (20160005, 1014, 72);
-insert into SCORE (student_id, course_id, score)
-values (20160006, 1016, 57);
-insert into SCORE (student_id, course_id, score)
-values (20160006, 1017, 69);
-insert into SCORE (student_id, course_id, score)
-values (20160006, 1022, 79);
-insert into SCORE (student_id, course_id, score)
-values (20160006, 1007, 96);
-insert into SCORE (student_id, course_id, score)
-values (20160006, 1008, 73);
-insert into SCORE (student_id, course_id, score)
-values (20160006, 1012, 69);
-insert into SCORE (student_id, course_id, score)
-values (20160007, 1018, 91);
-insert into SCORE (student_id, course_id, score)
-values (20160007, 1024, 82);
-insert into SCORE (student_id, course_id, score)
-values (20160007, 1009, 70);
-insert into SCORE (student_id, course_id, score)
-values (20160007, 1010, 78);
-insert into SCORE (student_id, course_id, score)
-values (20160007, 1026, 89);
-insert into SCORE (student_id, course_id, score)
-values (20160007, 1011, 97);
-insert into SCORE (student_id, course_id, score)
-values (20160007, 1013, 60);
-insert into SCORE (student_id, course_id, score)
-values (20160008, 1017, 55);
-insert into SCORE (student_id, course_id, score)
 values (20160008, 1003, 93);
 insert into SCORE (student_id, course_id, score)
 values (20160008, 1022, 100);
@@ -135,8 +23,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160008, 1026, 79);
 insert into SCORE (student_id, course_id, score)
 values (20160008, 1011, 99);
-insert into SCORE (student_id, course_id, score)
-values (20160009, 1000, 94);
 insert into SCORE (student_id, course_id, score)
 values (20160009, 1005, 70);
 insert into SCORE (student_id, course_id, score)
@@ -192,8 +78,6 @@ values (20160012, 1013, 62);
 insert into SCORE (student_id, course_id, score)
 values (20160012, 1014, 52);
 insert into SCORE (student_id, course_id, score)
-values (20160013, 1000, 81);
-insert into SCORE (student_id, course_id, score)
 values (20160013, 1003, 63);
 insert into SCORE (student_id, course_id, score)
 values (20160013, 1005, 93);
@@ -211,8 +95,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160014, 1005, 67);
 insert into SCORE (student_id, course_id, score)
 values (20160014, 1020, 59);
-commit;
-prompt 100 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160014, 1021, 94);
 insert into SCORE (student_id, course_id, score)
@@ -308,8 +190,6 @@ values (20160020, 1013, 81);
 insert into SCORE (student_id, course_id, score)
 values (20160021, 1016, 52);
 insert into SCORE (student_id, course_id, score)
-values (20160021, 1000, 89);
-insert into SCORE (student_id, course_id, score)
 values (20160021, 1003, 98);
 insert into SCORE (student_id, course_id, score)
 values (20160021, 1002, 97);
@@ -331,6 +211,8 @@ insert into SCORE (student_id, course_id, score)
 values (20160022, 1011, 78);
 insert into SCORE (student_id, course_id, score)
 values (20160022, 1012, 87);
+commit;
+prompt 100 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160022, 1014, 66);
 insert into SCORE (student_id, course_id, score)
@@ -413,8 +295,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160028, 1023, 51);
 insert into SCORE (student_id, course_id, score)
 values (20160028, 1025, 55);
-commit;
-prompt 200 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160028, 1010, 84);
 insert into SCORE (student_id, course_id, score)
@@ -520,8 +400,6 @@ values (20160035, 1013, 75);
 insert into SCORE (student_id, course_id, score)
 values (20160036, 1016, 56);
 insert into SCORE (student_id, course_id, score)
-values (20160036, 1000, 65);
-insert into SCORE (student_id, course_id, score)
 values (20160036, 1019, 60);
 insert into SCORE (student_id, course_id, score)
 values (20160036, 1002, 78);
@@ -535,6 +413,8 @@ insert into SCORE (student_id, course_id, score)
 values (20160037, 1017, 76);
 insert into SCORE (student_id, course_id, score)
 values (20160037, 1003, 76);
+commit;
+prompt 200 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160037, 1002, 70);
 insert into SCORE (student_id, course_id, score)
@@ -615,8 +495,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160042, 1006, 80);
 insert into SCORE (student_id, course_id, score)
 values (20160042, 1026, 80);
-commit;
-prompt 300 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160043, 1016, 83);
 insert into SCORE (student_id, course_id, score)
@@ -688,8 +566,6 @@ values (20160047, 1012, 100);
 insert into SCORE (student_id, course_id, score)
 values (20160047, 1013, 97);
 insert into SCORE (student_id, course_id, score)
-values (20160048, 1000, 69);
-insert into SCORE (student_id, course_id, score)
 values (20160048, 1008, 64);
 insert into SCORE (student_id, course_id, score)
 values (20160048, 1024, 77);
@@ -703,8 +579,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160048, 1012, 58);
 insert into SCORE (student_id, course_id, score)
 values (20160049, 1017, 59);
-insert into SCORE (student_id, course_id, score)
-values (20160049, 1000, 54);
 insert into SCORE (student_id, course_id, score)
 values (20160049, 1020, 51);
 insert into SCORE (student_id, course_id, score)
@@ -741,12 +615,12 @@ insert into SCORE (student_id, course_id, score)
 values (20160051, 1024, 99);
 insert into SCORE (student_id, course_id, score)
 values (20160051, 1013, 77);
+commit;
+prompt 300 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160051, 1014, 53);
 insert into SCORE (student_id, course_id, score)
 values (20160052, 1016, 61);
-insert into SCORE (student_id, course_id, score)
-values (20160052, 1000, 58);
 insert into SCORE (student_id, course_id, score)
 values (20160052, 1002, 64);
 insert into SCORE (student_id, course_id, score)
@@ -762,8 +636,6 @@ values (20160053, 1001, 84);
 insert into SCORE (student_id, course_id, score)
 values (20160053, 1017, 74);
 insert into SCORE (student_id, course_id, score)
-values (20160053, 1000, 79);
-insert into SCORE (student_id, course_id, score)
 values (20160053, 1003, 61);
 insert into SCORE (student_id, course_id, score)
 values (20160053, 1008, 70);
@@ -773,8 +645,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160053, 1015, 60);
 insert into SCORE (student_id, course_id, score)
 values (20160054, 1016, 88);
-insert into SCORE (student_id, course_id, score)
-values (20160054, 1000, 80);
 insert into SCORE (student_id, course_id, score)
 values (20160054, 1003, 76);
 insert into SCORE (student_id, course_id, score)
@@ -788,8 +658,6 @@ values (20160054, 1014, 82);
 insert into SCORE (student_id, course_id, score)
 values (20160055, 1016, 64);
 insert into SCORE (student_id, course_id, score)
-values (20160055, 1000, 54);
-insert into SCORE (student_id, course_id, score)
 values (20160055, 1019, 59);
 insert into SCORE (student_id, course_id, score)
 values (20160055, 1020, 62);
@@ -801,8 +669,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160055, 1026, 84);
 insert into SCORE (student_id, course_id, score)
 values (20160056, 1016, 58);
-insert into SCORE (student_id, course_id, score)
-values (20160056, 1000, 79);
 insert into SCORE (student_id, course_id, score)
 values (20160056, 1005, 77);
 insert into SCORE (student_id, course_id, score)
@@ -817,8 +683,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160057, 1018, 62);
 insert into SCORE (student_id, course_id, score)
 values (20160057, 1002, 63);
-commit;
-prompt 400 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160057, 1019, 69);
 insert into SCORE (student_id, course_id, score)
@@ -842,6 +706,104 @@ values (20160058, 1009, 79);
 insert into SCORE (student_id, course_id, score)
 values (20160058, 1025, 100);
 insert into SCORE (student_id, course_id, score)
+values (20160001, 1018, 65);
+insert into SCORE (student_id, course_id, score)
+values (20160001, 1003, 71);
+insert into SCORE (student_id, course_id, score)
+values (20160001, 1020, 73);
+insert into SCORE (student_id, course_id, score)
+values (20160001, 1007, 67);
+insert into SCORE (student_id, course_id, score)
+values (20160001, 1006, 67);
+insert into SCORE (student_id, course_id, score)
+values (20160001, 1009, 90);
+insert into SCORE (student_id, course_id, score)
+values (20160001, 1013, 69);
+insert into SCORE (student_id, course_id, score)
+values (20160002, 1018, 100);
+insert into SCORE (student_id, course_id, score)
+values (20160002, 1002, 67);
+insert into SCORE (student_id, course_id, score)
+values (20160002, 1004, 80);
+insert into SCORE (student_id, course_id, score)
+values (20160002, 1021, 96);
+insert into SCORE (student_id, course_id, score)
+values (20160002, 1022, 61);
+insert into SCORE (student_id, course_id, score)
+values (20160002, 1012, 91);
+insert into SCORE (student_id, course_id, score)
+values (20160002, 1013, 86);
+insert into SCORE (student_id, course_id, score)
+values (20160003, 1016, 74);
+insert into SCORE (student_id, course_id, score)
+values (20160003, 1001, 87);
+insert into SCORE (student_id, course_id, score)
+values (20160003, 1019, 92);
+insert into SCORE (student_id, course_id, score)
+values (20160003, 1020, 99);
+insert into SCORE (student_id, course_id, score)
+values (20160003, 1024, 52);
+insert into SCORE (student_id, course_id, score)
+values (20160003, 1011, 98);
+insert into SCORE (student_id, course_id, score)
+values (20160003, 1014, 92);
+insert into SCORE (student_id, course_id, score)
+values (20160004, 1020, 82);
+insert into SCORE (student_id, course_id, score)
+values (20160004, 1005, 95);
+insert into SCORE (student_id, course_id, score)
+values (20160004, 1007, 99);
+insert into SCORE (student_id, course_id, score)
+values (20160004, 1006, 81);
+insert into SCORE (student_id, course_id, score)
+values (20160004, 1023, 100);
+insert into SCORE (student_id, course_id, score)
+values (20160004, 1008, 94);
+insert into SCORE (student_id, course_id, score)
+values (20160004, 1011, 67);
+insert into SCORE (student_id, course_id, score)
+values (20160005, 1016, 78);
+insert into SCORE (student_id, course_id, score)
+values (20160005, 1001, 80);
+insert into SCORE (student_id, course_id, score)
+values (20160005, 1003, 61);
+insert into SCORE (student_id, course_id, score)
+values (20160005, 1020, 86);
+insert into SCORE (student_id, course_id, score)
+values (20160005, 1023, 54);
+insert into SCORE (student_id, course_id, score)
+values (20160005, 1008, 74);
+insert into SCORE (student_id, course_id, score)
+values (20160005, 1014, 72);
+insert into SCORE (student_id, course_id, score)
+values (20160006, 1016, 57);
+insert into SCORE (student_id, course_id, score)
+values (20160006, 1017, 69);
+insert into SCORE (student_id, course_id, score)
+values (20160006, 1022, 79);
+insert into SCORE (student_id, course_id, score)
+values (20160006, 1007, 96);
+insert into SCORE (student_id, course_id, score)
+values (20160006, 1008, 73);
+insert into SCORE (student_id, course_id, score)
+values (20160006, 1012, 69);
+insert into SCORE (student_id, course_id, score)
+values (20160007, 1018, 91);
+insert into SCORE (student_id, course_id, score)
+values (20160007, 1024, 82);
+insert into SCORE (student_id, course_id, score)
+values (20160007, 1009, 70);
+insert into SCORE (student_id, course_id, score)
+values (20160007, 1010, 78);
+insert into SCORE (student_id, course_id, score)
+values (20160007, 1026, 89);
+insert into SCORE (student_id, course_id, score)
+values (20160007, 1011, 97);
+insert into SCORE (student_id, course_id, score)
+values (20160007, 1013, 60);
+insert into SCORE (student_id, course_id, score)
+values (20160008, 1017, 55);
+insert into SCORE (student_id, course_id, score)
 values (20160058, 1015, 68);
 insert into SCORE (student_id, course_id, score)
 values (20160059, 1001, 96);
@@ -855,6 +817,8 @@ insert into SCORE (student_id, course_id, score)
 values (20160059, 1022, 87);
 insert into SCORE (student_id, course_id, score)
 values (20160059, 1024, 88);
+commit;
+prompt 400 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160059, 1010, 62);
 insert into SCORE (student_id, course_id, score)
@@ -899,8 +863,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160062, 1009, 65);
 insert into SCORE (student_id, course_id, score)
 values (20160062, 1015, 76);
-insert into SCORE (student_id, course_id, score)
-values (20160063, 1000, 70);
 insert into SCORE (student_id, course_id, score)
 values (20160063, 1003, 58);
 insert into SCORE (student_id, course_id, score)
@@ -986,8 +948,6 @@ values (20160068, 1011, 89);
 insert into SCORE (student_id, course_id, score)
 values (20160069, 1001, 52);
 insert into SCORE (student_id, course_id, score)
-values (20160069, 1000, 71);
-insert into SCORE (student_id, course_id, score)
 values (20160069, 1003, 84);
 insert into SCORE (student_id, course_id, score)
 values (20160069, 1004, 58);
@@ -999,8 +959,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160069, 1014, 100);
 insert into SCORE (student_id, course_id, score)
 values (20160070, 1001, 58);
-insert into SCORE (student_id, course_id, score)
-values (20160070, 1000, 83);
 insert into SCORE (student_id, course_id, score)
 values (20160070, 1003, 99);
 insert into SCORE (student_id, course_id, score)
@@ -1019,8 +977,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160071, 1006, 84);
 insert into SCORE (student_id, course_id, score)
 values (20160071, 1010, 79);
-commit;
-prompt 500 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160071, 1012, 68);
 insert into SCORE (student_id, course_id, score)
@@ -1029,8 +985,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160071, 1015, 94);
 insert into SCORE (student_id, course_id, score)
 values (20160072, 1001, 77);
-insert into SCORE (student_id, course_id, score)
-values (20160072, 1000, 75);
 insert into SCORE (student_id, course_id, score)
 values (20160072, 1023, 72);
 insert into SCORE (student_id, course_id, score)
@@ -1041,8 +995,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160072, 1008, 71);
 insert into SCORE (student_id, course_id, score)
 values (20160072, 1026, 98);
-insert into SCORE (student_id, course_id, score)
-values (20160073, 1000, 74);
 insert into SCORE (student_id, course_id, score)
 values (20160073, 1017, 72);
 insert into SCORE (student_id, course_id, score)
@@ -1067,10 +1019,10 @@ insert into SCORE (student_id, course_id, score)
 values (20160074, 1010, 91);
 insert into SCORE (student_id, course_id, score)
 values (20160074, 1026, 65);
+commit;
+prompt 500 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160074, 1013, 51);
-insert into SCORE (student_id, course_id, score)
-values (20160075, 1000, 56);
 insert into SCORE (student_id, course_id, score)
 values (20160075, 1003, 90);
 insert into SCORE (student_id, course_id, score)
@@ -1129,8 +1081,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160079, 1001, 89);
 insert into SCORE (student_id, course_id, score)
 values (20160079, 1017, 57);
-insert into SCORE (student_id, course_id, score)
-values (20160079, 1000, 51);
 insert into SCORE (student_id, course_id, score)
 values (20160079, 1005, 61);
 insert into SCORE (student_id, course_id, score)
@@ -1221,8 +1171,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160085, 1022, 88);
 insert into SCORE (student_id, course_id, score)
 values (20160085, 1008, 65);
-commit;
-prompt 600 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160085, 1013, 58);
 insert into SCORE (student_id, course_id, score)
@@ -1273,6 +1221,8 @@ insert into SCORE (student_id, course_id, score)
 values (20160089, 1017, 76);
 insert into SCORE (student_id, course_id, score)
 values (20160089, 1021, 80);
+commit;
+prompt 600 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160089, 1004, 96);
 insert into SCORE (student_id, course_id, score)
@@ -1281,8 +1231,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160089, 1026, 79);
 insert into SCORE (student_id, course_id, score)
 values (20160089, 1015, 90);
-insert into SCORE (student_id, course_id, score)
-values (20160090, 1000, 84);
 insert into SCORE (student_id, course_id, score)
 values (20160090, 1017, 91);
 insert into SCORE (student_id, course_id, score)
@@ -1340,8 +1288,6 @@ values (20160093, 1014, 57);
 insert into SCORE (student_id, course_id, score)
 values (20160094, 1016, 64);
 insert into SCORE (student_id, course_id, score)
-values (20160094, 1000, 95);
-insert into SCORE (student_id, course_id, score)
 values (20160094, 1003, 96);
 insert into SCORE (student_id, course_id, score)
 values (20160094, 1002, 92);
@@ -1351,8 +1297,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160094, 1026, 65);
 insert into SCORE (student_id, course_id, score)
 values (20160094, 1012, 87);
-insert into SCORE (student_id, course_id, score)
-values (20160095, 1000, 95);
 insert into SCORE (student_id, course_id, score)
 values (20160095, 1003, 61);
 insert into SCORE (student_id, course_id, score)
@@ -1365,8 +1309,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160095, 1007, 76);
 insert into SCORE (student_id, course_id, score)
 values (20160095, 1022, 80);
-insert into SCORE (student_id, course_id, score)
-values (20160096, 1000, 66);
 insert into SCORE (student_id, course_id, score)
 values (20160096, 1005, 71);
 insert into SCORE (student_id, course_id, score)
@@ -1423,8 +1365,6 @@ insert into SCORE (student_id, course_id, score)
 values (20160099, 1011, 98);
 insert into SCORE (student_id, course_id, score)
 values (20160100, 1016, 56);
-commit;
-prompt 700 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160100, 1005, 87);
 insert into SCORE (student_id, course_id, score)
@@ -1483,6 +1423,8 @@ insert into SCORE (student_id, course_id, score)
 values (20160104, 1003, 71);
 insert into SCORE (student_id, course_id, score)
 values (20160104, 1021, 72);
+commit;
+prompt 700 records committed...
 insert into SCORE (student_id, course_id, score)
 values (20160104, 1009, 78);
 insert into SCORE (student_id, course_id, score)
@@ -1522,7 +1464,7 @@ values (20160106, 1023, 93);
 insert into SCORE (student_id, course_id, score)
 values (20160106, 1012, 79);
 commit;
-prompt 748 records loaded
+prompt 719 records loaded
 prompt Enabling foreign key constraints for SCORE...
 alter table SCORE enable constraint SYS_C0068230;
 alter table SCORE enable constraint SYS_C0068231;

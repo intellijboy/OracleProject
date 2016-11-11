@@ -21,7 +21,7 @@ public class TestGenerageSql {
 							+ getGender(i)
 							+ "', TO_DATE('"
 							+ getBirthday()
-							+ "', 'YYYY-MM-DD'), '写下我的格言吧','http://p1.gexing.com/G1/M00/C7/73/rBACE1IgR_PBIieMAAAfAWtb1fA891_200x200_3.jpg');");
+							+ "', 'YYYY-MM-DD'), '写下我的格言吧','http://p1.gexing.com/G1/M00/C7/73/rBACE1IgR_PBIieMAAAfAWtb1fA891_200x200_3.jpg','1870260"+(1000+new Random().nextInt(8999))+"');");
 		}
 	}
 	
@@ -51,8 +51,8 @@ public class TestGenerageSql {
 	
 	@Test
 	public void getTeacherSql(){
-		for(int i=1;i<=20;i++){
-			System.out.println("INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher"+i+"','teacher"+i+"','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg');");
+		for(int i=1;i<=100;i++){
+			System.out.println("INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher"+i+"','teacher"+i+"','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','1870250"+(1000+new Random().nextInt(8999))+"','"+(1001+new Random().nextInt(27))+"');");
 		}
 	}
 	
@@ -68,30 +68,30 @@ public class TestGenerageSql {
 		//信息：学生107个 老师21个
 		
 		System.out.println("--1.同学给同学留言 多");
-		for(int i=0;i<100;i++){
+		for(int i=0;i<20;i++){
 			System.out.println("INSERT INTO message VALUES('"+getRandomStudentId()+"','"+getRandomStudentId()+"','到此一游',sysdate);");
 		}
 		System.out.println("--2.老师给老师留言 少");
-		for(int i=0;i<50;i++){
+		for(int i=0;i<5;i++){
 			System.out.println("INSERT INTO message VALUES('"+getRandomTeacherId()+"','"+getRandomTeacherId()+"','到此一游',sysdate);");
 		}
 		System.out.println("--3.同学对老师留言 较少");
-		for(int i=0;i<100;i++){
+		for(int i=0;i<50;i++){
 			System.out.println("INSERT INTO message VALUES('"+getRandomStudentId()+"','"+getRandomTeacherId()+"','到此一游',sysdate);");
 		}
 		System.out.println("--4.老师对同学留言 较少");
-		for(int i=0;i<50;i++){
+		for(int i=0;i<5;i++){
 			System.out.println("INSERT INTO message VALUES('"+getRandomTeacherId()+"','"+getRandomStudentId()+"','到此一游',sysdate);");
 		}
 	}
 	
 	private int getRandomStudentId(){
-		int result = new Random().nextInt(107)+20160000;
+		int result = new Random().nextInt(4)+20160000;
 		return result;
 	}
 	
 	private int getRandomTeacherId(){
-		int result  = new Random().nextInt(21)+10000;
+		int result  = new Random().nextInt(7)+10001;
 		return result;
 	}
 	

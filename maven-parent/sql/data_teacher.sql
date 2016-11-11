@@ -1,59 +1,100 @@
-﻿prompt PL/SQL Developer import file
-prompt Created on 2016年11月10日 by dl
-set feedback off
-set define off
-prompt Disabling triggers for TEACHER...
-alter table TEACHER disable all triggers;
-prompt Deleting TEACHER...
-delete from TEACHER;
-commit;
-prompt Loading TEACHER...
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10002, 'Teacher1', 'teacher1', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10003, 'Teacher2', 'teacher2', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10004, 'Teacher3', 'teacher3', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10005, 'Teacher4', 'teacher4', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10006, 'Teacher5', 'teacher5', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10007, 'Teacher6', 'teacher6', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10008, 'Teacher7', 'teacher7', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10009, 'Teacher8', 'teacher8', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10010, 'Teacher9', 'teacher9', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10011, 'Teacher10', 'teacher10', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10012, 'Teacher11', 'teacher11', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10013, 'Teacher12', 'teacher12', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10014, 'Teacher13', 'teacher13', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10015, 'Teacher14', 'teacher14', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10016, 'Teacher15', 'teacher15', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10017, 'Teacher16', 'teacher16', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10018, 'Teacher17', 'teacher17', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10019, 'Teacher18', 'teacher18', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10020, 'Teacher19', 'teacher19', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10000, 'Teacher0', 'teacher0', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-insert into TEACHER (teacher_id, name, password, head_url)
-values (10001, 'Teacher1', 'teacher1', 'http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760=21=0.jpg');
-commit;
-prompt 21 records loaded
-prompt Enabling triggers for TEACHER...
-alter table TEACHER enable all triggers;
-set feedback on
-set define on
-prompt Done.
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher1','teacher1','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505873','1024');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher2','teacher2','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501830','1004');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher3','teacher3','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507155','1009');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher4','teacher4','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502015','1009');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher5','teacher5','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501239','1014');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher6','teacher6','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502888','1019');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher7','teacher7','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506584','1010');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher8','teacher8','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506067','1003');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher9','teacher9','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509776','1021');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher10','teacher10','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507214','1004');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher11','teacher11','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503544','1001');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher12','teacher12','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504310','1011');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher13','teacher13','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702508585','1019');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher14','teacher14','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504329','1004');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher15','teacher15','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702508282','1009');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher16','teacher16','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507937','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher17','teacher17','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503970','1019');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher18','teacher18','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503804','1020');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher19','teacher19','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702508271','1017');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher20','teacher20','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504906','1013');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher21','teacher21','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501197','1005');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher22','teacher22','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509061','1015');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher23','teacher23','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509717','1013');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher24','teacher24','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507281','1015');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher25','teacher25','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507015','1024');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher26','teacher26','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503572','1017');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher27','teacher27','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505749','1026');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher28','teacher28','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501590','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher29','teacher29','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504768','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher30','teacher30','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501557','1015');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher31','teacher31','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506732','1016');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher32','teacher32','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509826','1022');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher33','teacher33','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503575','1009');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher34','teacher34','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507552','1011');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher35','teacher35','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507241','1001');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher36','teacher36','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503450','1022');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher37','teacher37','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501318','1002');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher38','teacher38','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505206','1017');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher39','teacher39','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503612','1016');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher40','teacher40','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507512','1006');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher41','teacher41','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503210','1020');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher42','teacher42','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509183','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher43','teacher43','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503110','1018');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher44','teacher44','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502214','1020');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher45','teacher45','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503303','1001');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher46','teacher46','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509136','1002');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher47','teacher47','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501927','1019');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher48','teacher48','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504443','1006');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher49','teacher49','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502725','1022');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher50','teacher50','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509996','1006');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher51','teacher51','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507758','1003');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher52','teacher52','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505243','1019');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher53','teacher53','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506741','1025');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher54','teacher54','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702508902','1007');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher55','teacher55','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504122','1015');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher56','teacher56','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505675','1005');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher57','teacher57','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502505','1026');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher58','teacher58','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505370','1018');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher59','teacher59','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506654','1004');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher60','teacher60','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504137','1005');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher61','teacher61','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507194','1022');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher62','teacher62','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509777','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher63','teacher63','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702508037','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher64','teacher64','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501250','1022');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher65','teacher65','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502158','1014');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher66','teacher66','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501733','1019');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher67','teacher67','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504917','1005');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher68','teacher68','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506988','1021');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher69','teacher69','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506669','1020');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher70','teacher70','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505430','1010');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher71','teacher71','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505448','1009');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher72','teacher72','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504644','1017');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher73','teacher73','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509340','1011');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher74','teacher74','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506782','1012');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher75','teacher75','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505063','1027');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher76','teacher76','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509600','1017');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher77','teacher77','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501750','1002');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher78','teacher78','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505097','1020');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher79','teacher79','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503117','1023');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher80','teacher80','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505709','1015');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher81','teacher81','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502003','1015');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher82','teacher82','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506618','1017');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher83','teacher83','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509206','1009');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher84','teacher84','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505148','1025');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher85','teacher85','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504782','1010');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher86','teacher86','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503601','1026');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher87','teacher87','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507848','1006');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher88','teacher88','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504679','1009');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher89','teacher89','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507815','1012');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher90','teacher90','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502467','1011');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher91','teacher91','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505485','1022');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher92','teacher92','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702504200','1020');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher93','teacher93','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702505148','1017');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher94','teacher94','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702506702','1024');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher95','teacher95','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503525','1016');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher96','teacher96','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702501871','1012');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher97','teacher97','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702503371','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher98','teacher98','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702502018','1027');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher99','teacher99','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702507769','1008');
+INSERT INTO teacher VALUES(teacher_id.nextval,'Teacher100','teacher100','http://img2.imgtn.bdimg.com/it/u=1324508512,3201319760&fm=21&gp=0.jpg','18702509922','1023');

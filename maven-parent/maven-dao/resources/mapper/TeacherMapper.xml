@@ -86,4 +86,20 @@
     where ID = #{id,jdbcType=DECIMAL}
       and COURSE_ID = #{courseId,jdbcType=DECIMAL}
   </update>
+  
+  <!-- 教师学生信息模糊查询相关 -->
+	<select id="selectVagueStu" resultType="Student">
+		 SELECT  id,name,password,gender,birthday,motto,phone
+		 FROM student 
+		 WHERE name 
+		 LIKE  '%'||#{keyWord}||'%'
+	</select>
+	
+	<select id="selectVagueTeacher" resultType="Teacher">
+		SELECT id,name,password,gender,birthday,motto,phone
+		FROM student
+		WHERE name 
+	    LIKE '%'||#{keyWord}||'%'
+	</select>
+	
 </mapper>

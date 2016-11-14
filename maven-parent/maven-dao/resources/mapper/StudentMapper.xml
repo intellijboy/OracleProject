@@ -106,21 +106,64 @@
     </set>
     where ID = #{id,jdbcType=DECIMAL}
   </update>
-  
+  <!--  学生登录-->
   <select id="selectStuByIDAndPwd" resultType="Student">
   	SELECT * from student
   	 WHERE id=#{id}
   	 AND password=#{password}
   </select>
   
-  <select id="selectStuTeachers" resultType="Teacher">
-  		SELECT id,name,password,head_url,phone,course_id
-  		FROM teacher 
-  		WHERE id IN(
-  		SELECT teacher_id 
-  		FROM score 
-  		WHERE student_id=#{stuId}
-  		)
-  		
-  </select>
+  <!--  查询学生的课程信息-->
+  <select id="selectStuCourseScore"  resultType="StudentCourses">
+  	SELECT t.student_id stuId,s.name stuName,c.id courseId,c.name courseId,t.score scoreOrCredit  
+  	FROM (
+		select student_id,course_id,score,teacher_id 
+		FROM score 
+		WHERE student_id = #{stuId}
+			)t,student s,course c
+	WHERE t.student_id = s.id
+	AND t.course_id = c.id
+   </select>
+   
+   <!--查询学生的老师信息  -->
+   <select id="selectStuTeachers" resultType="Teacher">
+   	SELECT id,name,password,head_url,phone,course_id 
+   	FROM teacher where id 
+   	IN(
+   	SELECT teacher_id 
+   	FROM score
+   	WHERE student_id=#{stuId})
+   </select>
+	<!-- 1教师学生信息模糊查询相关 -->
+	<select id="selectVagueStu" resultType="Student">
+		 SELECT  id,name,password,gender,birthday,motto,phone
+		 FROM student 
+		 WHERE name 
+		 LIKE  '%'||#{keyWord}||'%'
+	</select>
+	
+	<!-- 2教师学生信息模糊查询相关 -->
+	<select id="selectVagueTeacher" resultType="Teacher">
+		SELECT id,name,password,gender,birthday,motto,phone
+		FROM student
+		WHERE name 
+	    LIKE '%'||#{keyWord}||'%'
+	</select>
+	
+	<!--  选课时候，查询所有的课程以及老师-->
+	<select id="selectCourseTeaMsg" resultType="CourseTeachers">
+	   SELECT c.id courseId,c.name courseName ,c.credit,t.id teacherId,t.name teacherName
+       FROM course c,teacher t 
+       WHERE c.id = t.course_id 
+       ORDER BY c.id
+	</select>
+	
+	<!-- 学生已选课信息查询 -->
+	<select id="selectStuCourses" resultType="CourseTeachers">
+	  SELECT s.id studentId,s.name studentName,c.id courseId,c.name courseName,c.credit scoreOrCredit
+	  FROM score sc,student s,course c 
+	  WHERE score is NULL
+	  AND sc.student_id = s.id 
+	  AND sc.course_id = c.id
+	</select>
 </mapper>

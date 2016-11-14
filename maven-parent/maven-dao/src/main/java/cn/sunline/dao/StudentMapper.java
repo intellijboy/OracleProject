@@ -4,8 +4,11 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import cn.sunline.entity.Course;
 import cn.sunline.entity.Student;
 import cn.sunline.entity.Teacher;
+import cn.sunline.rtmp.CourseTeachers;
+import cn.sunline.rtmp.StudentCourses;
 
 public interface StudentMapper {
 	
@@ -33,8 +36,10 @@ public interface StudentMapper {
      * @param stuId
      * @return
      */
-    List<Teacher> selectStuTeachers(long stuId);
+    List<StudentCourses> selectStuCourseScore(long stuId);
     
+    
+    List<Teacher> selectStuTeachers(long stuId);
     /**
      * 模糊查询学生信息
      * @param keyWord
@@ -48,5 +53,18 @@ public interface StudentMapper {
      * @return
      */
     List<Teacher> selectVagueTeacher(String keyWord);
+    
+    /**
+     * 查询所有的课程信息
+     * @return
+     */
+    List<CourseTeachers> selectCourseTeaMsg();
+    
+    /**
+     * 查看学生的选课信息
+     * @param stuId
+     * @return
+     */
+    List<Course> selectStuCourses(long stuId);
     
 }

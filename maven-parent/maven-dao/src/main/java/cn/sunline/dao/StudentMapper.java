@@ -1,12 +1,15 @@
 package cn.sunline.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
 import cn.sunline.entity.Course;
 import cn.sunline.entity.Student;
 import cn.sunline.entity.Teacher;
+import cn.sunline.rqmap.StudentQueryParam;
+import cn.sunline.rqmap.TeacherQueryParam;
 import cn.sunline.rtmp.CourseTeachers;
 import cn.sunline.rtmp.StudentCourses;
 
@@ -45,14 +48,14 @@ public interface StudentMapper {
      * @param keyWord
      * @return
      */
-    List<Student> selectVagueStu(String keyWord);
+    List<Student> selectVagueStu(StudentQueryParam studentQueryParam);
     
     /**
      * 模糊查询教师信息
      * @param keyWord
      * @return
      */
-    List<Teacher> selectVagueTeacher(String keyWord);
+    List<Teacher> selectVagueTeacher(TeacherQueryParam teacherQueryParam);
     
     /**
      * 查询所有的课程信息

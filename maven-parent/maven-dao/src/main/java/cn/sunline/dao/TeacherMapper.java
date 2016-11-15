@@ -5,6 +5,8 @@ import java.util.List;
 import cn.sunline.entity.Student;
 import cn.sunline.entity.Teacher;
 import cn.sunline.entity.TeacherKey;
+import cn.sunline.rqmap.StudentQueryParam;
+import cn.sunline.rqmap.TeacherQueryParam;
 
 public interface TeacherMapper {
     int deleteByPrimaryKey(TeacherKey key);
@@ -21,14 +23,14 @@ public interface TeacherMapper {
      * @param keyWord
      * @return
      */
-    List<Student> selectVagueStu(String keyWord);
+    List<Student> selectVagueStu(StudentQueryParam studentQueryParam);
     
     /**
      * 模糊查询教师信息
      * @param keyWord
      * @return
      */
-    List<Teacher> selectVagueTeacher(String keyWord);
+    List<Teacher> selectVagueTeacher(TeacherQueryParam teacherQueryParam);
     
     
 }

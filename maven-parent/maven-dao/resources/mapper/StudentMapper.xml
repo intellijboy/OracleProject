@@ -135,19 +135,53 @@
    	WHERE student_id=#{stuId})
    </select>
 	<!-- 1教师学生信息模糊查询相关 -->
-	<select id="selectVagueStu" resultType="Student">
-		 SELECT  id,name,password,gender,birthday,motto,phone
-		 FROM student 
-		 WHERE name 
-		 LIKE  '%'||#{keyWord}||'%'
+	<select id="selectVagueStu" resultType="Student" parameterType="StudentQueryParam">
+		SELECT id,name,password,gender,birthday,motto,head_url,phone 
+		FROM
+		(
+		SELECT ROWNUM rowno,id,name,password,gender,birthday,motto,head_url,phone 
+		FROM student
+		<where>
+		  <if test="keyWord != null and keyWord != ''">    
+             name   LIKE '%'||#{keyWord}||'%'
+          </if>
+		  <if test="stuId != null">    
+            or id = #{stuId}
+          </if>
+		  <if test="gender != null">    
+            or gender = #{gender}
+          </if>
+		  <if test="phone != null">    
+            or phone = #{phone}
+          </if>
+		  <if test="beginIndex != null">    
+             AND ROWNUM<![CDATA[<=]]>#{endIndex}
+          </if>
+		</where>
+		) s
+		where s.rowno>#{beginIndex}
 	</select>
 	
 	<!-- 2教师学生信息模糊查询相关 -->
-	<select id="selectVagueTeacher" resultType="Teacher">
-		SELECT id,name,password,gender,birthday,motto,phone
-		FROM student
-		WHERE name 
-	    LIKE '%'||#{keyWord}||'%'
+	<select id="selectVagueTeacher"  parameterType="TeacherQueryParam" resultType="Teacher" >
+		SELECT id,name,password,head_url,phone,course_id 
+		FROM
+		(
+			SELECT ROWNUM rowno,id,name,password,head_url,phone,course_id 
+			FROM teacher 
+		<where>
+			  <if test="keyWord != null and keyWord != ''">    
+	             name   LIKE '%'||#{keyWord}||'%'
+	          </if>
+			  <if test="phone != null">    
+	            or phone = #{phone}
+	          </if>
+			  <if test="beginIndex != null">    
+	             AND ROWNUM<![CDATA[<=]]>#{endIndex}
+	          </if>
+		</where>
+		)temp
+		WHERE temp.rowno>#{beginIndex}
 	</select>
 	
 	<!--  选课时候，查询所有的课程以及老师-->

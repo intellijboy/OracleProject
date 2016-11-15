@@ -23,7 +23,7 @@
         <!--全局mybatis文件-->
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
         <!--entity包别名-->
-        <property name="typeAliasesPackage" value="cn.sunline.entity;cn.sunline.rtmp"></property>
+        <property name="typeAliasesPackage" value="cn.sunline.entity;cn.sunline.rtmp;cn.sunline.rqmap"></property>
         
         <!--mapper需要的xml映射文件-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"></property>

@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Param;
 
 import cn.sunline.entity.Score;
 import cn.sunline.entity.ScoreKey;
-import cn.sunline.entity.Student;
 
 public interface ScoreMapper {
     int deleteByPrimaryKey(ScoreKey key);

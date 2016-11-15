@@ -146,13 +146,13 @@
              name   LIKE '%'||#{keyWord}||'%'
           </if>
 		  <if test="stuId != null">    
-            or id = #{stuId}
+            AND id = #{stuId}
           </if>
 		  <if test="gender != null">    
-            or gender = #{gender}
+            AND gender = #{gender}
           </if>
 		  <if test="phone != null">    
-            or phone = #{phone}
+            AND phone = #{phone}
           </if>
 		  <if test="beginIndex != null">    
              AND ROWNUM<![CDATA[<=]]>#{endIndex}
@@ -174,7 +174,7 @@
 	             name   LIKE '%'||#{keyWord}||'%'
 	          </if>
 			  <if test="phone != null">    
-	            or phone = #{phone}
+	            AND phone = #{phone}
 	          </if>
 			  <if test="beginIndex != null">    
 	             AND ROWNUM<![CDATA[<=]]>#{endIndex}

@@ -5,14 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mybatis.generator.api.MyBatisGenerator;
-import org.mybatis.generator.config.xml.MyBatisGeneratorConfigurationParser;
-
-import cn.sunline.entity.Student;
 
 public class TestDBConnect {
 	private String driverName = "oracle.jdbc.driver.OracleDriver";

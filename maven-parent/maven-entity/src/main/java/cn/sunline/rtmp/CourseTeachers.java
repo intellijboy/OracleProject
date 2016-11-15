@@ -38,5 +38,12 @@ public class CourseTeachers {
 		public void setTeacherName(String teacherName) {
 			this.teacherName = teacherName;
 		}
+		public BigDecimal getCredit() {
+			return credit;
+		}
+		public void setCredit(BigDecimal credit) {
+			this.credit = credit;
+		}
+		
 		
 }

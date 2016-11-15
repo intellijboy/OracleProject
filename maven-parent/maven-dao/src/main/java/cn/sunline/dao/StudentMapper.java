@@ -1,10 +1,7 @@
 package cn.sunline.dao;
 
 import java.util.List;
-import java.util.Map;
-
 import org.apache.ibatis.annotations.Param;
-
 import cn.sunline.entity.Course;
 import cn.sunline.entity.Student;
 import cn.sunline.entity.Teacher;

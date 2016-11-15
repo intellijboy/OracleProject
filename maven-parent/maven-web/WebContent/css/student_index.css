@@ -1,0 +1,18 @@
+.topItem {
+	float: left;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.searchBox {
+	float: left;
+}
+
+.userLogo {
+	float: left;
+	padding-left: 120px;
+}
+
+.leftTop{
+	text-align: center;
+}

@@ -18,7 +18,7 @@
 	</properties>
 	<dependencies>
 
-		<!--以来与实体entity层 -->
+		<!--依赖与实体entity层 -->
 		<dependency>
 			<groupId>cn.sunline</groupId>
 			<artifactId>maven-entity</artifactId>

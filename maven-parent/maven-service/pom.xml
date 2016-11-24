@@ -1,20 +1,50 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>cn.sunline</groupId>
-    <artifactId>maven-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>cn.sunline</groupId>
-  <artifactId>maven-service</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>maven-service</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <dependencies>
-  </dependencies>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.sunline</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>cn.sunline</groupId>
+	<artifactId>maven-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>maven-service</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<!--依赖Dao层 -->
+		<dependency>
+			<groupId>cn.sunline</groupId>
+			<artifactId>maven-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- 依赖exception层 -->
+		<dependency>
+			<groupId>cn.sunline</groupId>
+			<artifactId>maven-exception</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!--Redis依赖 -->
+		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
+		<!--spring的事务依赖 -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.3.3.RELEASE</version>
+		</dependency>
+
+	</dependencies>
 </project>

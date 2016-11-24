@@ -1,25 +1,61 @@
-select s.*,s.rowid from student s;
-select c.*,c.rowid from course c;
-select sc.*,sc.rowid from score sc;
-select t.*,t.rowid from teacher t;
-select m.*,m.rowid from message m;
+create table SSPDATA.COURSE
+(
+  id     NUMBER(10) not null,
+  name   VARCHAR2(32) not null,
+  credit NUMBER(4,1) not null
+)
 
---●删除属性列
-ALTER TABLE student DROP COLUMN age;
+create table SSPDATA.MESSAGE
+(
+  id_positive NUMBER(10) not null,
+  id_negetive NUMBER(10) not null,
+  content     VARCHAR2(4000),
+  datetime    DATE
+)
 
-delete from  student;
-delete from  course;
-delete from  score;
-delete from  teacher;
-delete from teacher_course;
-delete from  message;
+create table SSPDATA.SCORE
+(
+  student_id NUMBER(10) not null,
+  course_id  NUMBER(10) not null,
+  score      NUMBER(4,1),
+  teacher_id NUMBER(10)
+)
 
---●删除序列号
+
+create table SSPDATA.TEACHER
+(
+  id        NUMBER(10) not null,
+  name      VARCHAR2(32) not null,
+  password  VARCHAR2(32) not null,
+  head_url  VARCHAR2(200),
+  phone     VARCHAR2(11),
+  course_id NUMBER(10) not null
+)
+
+create table STUDENT
+(
+  id NUMBER(10) not null,
+  name       VARCHAR2(32) not null,
+  password   VARCHAR2(32) not null,
+  gender     VARCHAR2(4),
+  birthday   DATE,
+  motto      VARCHAR2(200),
+  head_url   VARCHAR2(200),
+  phone      VARCHAR2(11)
+)
+
+
+
+select * from student;
+select * from course;
+select * from course;
+select * from teacher;
+select * from message;
+
 DROP SEQUENCE student_id;
 DROP SEQUENCE course_id;
 DROP SEQUENCE teacher_id;
 
---●创建序列号
 CREATE sequence student_id
 INCREMENT BY 1
 START WITH 20160000   --每一届的学生假设不能超过4000人

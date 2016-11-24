@@ -12,7 +12,7 @@ import org.junit.Test;
 public class TestGenerageSql {
 	@Test
 	public void getStudentSql() {
-		for (int i = 0; i < 107; i++) {
+		for (int i = 0; i < 1000; i++) {
 			System.out
 					.println("INSERT INTO student VALUES(student_id.nextval, "
 							+ getName(i)
@@ -21,6 +21,9 @@ public class TestGenerageSql {
 							+ "', TO_DATE('"
 							+ getBirthday()
 							+ "', 'YYYY-MM-DD'), '写下我的格言吧','http://p1.gexing.com/G1/M00/C7/73/rBACE1IgR_PBIieMAAAfAWtb1fA891_200x200_3.jpg','1870260"+(1000+new Random().nextInt(8999))+"');");
+			if(i%50==0){
+				System.out.println("commit;");
+			}
 		}
 	}
 	
